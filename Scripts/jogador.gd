@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var tamanho_tile = 32
+var tamanho_tile = 16
 var duracao_movimento = 0.5
 
 var direcao = Vector2.ZERO
