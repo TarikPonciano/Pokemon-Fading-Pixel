@@ -21,12 +21,22 @@ func mover_grid():
 		
 	if direcao == Vector2.ZERO:
 		return
+	
+	if direcao.x != 0 and direcao.y != 0:
+		direcao = Vector2(sign(direcao.x), 0)
 		
 	var posicao_final = position + (direcao*tamanho_tile)
 	
 	var movimento_tween = create_tween()
 	
 	movimento_tween.tween_property(self,"position", posicao_final, duracao_movimento)
+	
+	#var scale_tween = create_tween()
+	#if direcao.x != 0:
+		#scale_tween.tween_property(self, "scale", Vector2(1.2,0.8), 0.15)
+	#else:
+		#scale_tween.tween_property(self, "scale", Vector2(0.8,1.2), 0.15)
+	#scale_tween.tween_property(self, "scale", Vector2(1,1), 0.15)
 	
 	movendo = true
 	
