@@ -6,6 +6,8 @@ var duracao_movimento = 0.5
 var direcao = Vector2.ZERO
 var movendo = false
 
+@export var grade_fase : TileMapLayer
+
 func _physics_process(delta: float) -> void:
 	
 	mover_grid()
