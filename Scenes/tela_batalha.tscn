@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cuym1pukc583p"]
+
+[node name="tela_batalha" type="Node2D" unique_id=1030975830]
+
+[node name="Label" type="Label" parent="." unique_id=725653384]
+offset_left = 379.0
+offset_top = 237.0
+offset_right = 723.0
+offset_bottom = 336.0
+theme_override_font_sizes/font_size = 72
+text = "BATALHA!"

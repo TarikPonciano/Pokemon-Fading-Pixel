@@ -71,4 +71,17 @@ func mover_grid():
 	
 	movendo = false
 	
+	if proximo_bloco.get_custom_data("Perigo") == true:
+		entrar_em_batalha()
+		
+	
+func entrar_em_batalha():
+	var numero_aleatorio = randi_range(1, 100)
+	
+	
+	if numero_aleatorio <= 11:
+	
+		get_tree().change_scene_to_file("res://Scenes/tela_batalha.tscn")
+	
+	
 	
