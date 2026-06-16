@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://cuym1pukc583p"]
 
+[ext_resource type="Script" uid="uid://dorlrc2c5kkf6" path="res://Scripts/tela_batalha.gd" id="1_fofkx"]
+
 [node name="tela_batalha" type="Node2D" unique_id=1030975830]
+script = ExtResource("1_fofkx")
 
 [node name="Label" type="Label" parent="." unique_id=725653384]
 offset_left = 379.0
@@ -9,3 +12,33 @@ offset_right = 723.0
 offset_bottom = 336.0
 theme_override_font_sizes/font_size = 72
 text = "BATALHA!"
+
+[node name="Pokemon Jogador" type="Panel" parent="." unique_id=251920720]
+offset_left = 764.0
+offset_top = 449.0
+offset_right = 1138.0
+offset_bottom = 632.0
+
+[node name="Especie" type="Label" parent="Pokemon Jogador" unique_id=1708586332]
+layout_mode = 0
+offset_left = 82.0
+offset_top = 77.0
+offset_right = 287.0
+offset_bottom = 111.0
+theme_override_font_sizes/font_size = 24
+text = "Pokemon Jogador"
+
+[node name="Pokemon Oponente" type="Panel" parent="." unique_id=502371166]
+offset_left = 2.0
+offset_top = 1.0
+offset_right = 376.0
+offset_bottom = 184.0
+
+[node name="Especie" type="Label" parent="Pokemon Oponente" unique_id=1910988214]
+layout_mode = 0
+offset_left = 82.0
+offset_top = 77.0
+offset_right = 287.0
+offset_bottom = 111.0
+theme_override_font_sizes/font_size = 24
+text = "Pokemon Jogador"

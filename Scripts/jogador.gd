@@ -11,10 +11,13 @@ var movendo = false
 @export var grade_fase : TileMapLayer
 var posicao_grid = Vector2i.ZERO
 
+
+
 func _ready() -> void:
 	# Pegamos qual casa mais próxima do centro do jogador e depois movemos o jogador para a posição especifica dessa casa
 	posicao_grid = grade_fase.local_to_map(position)
 	position = grade_fase.map_to_local(posicao_grid)
+
 	
 func _physics_process(delta: float) -> void:
 	
@@ -80,7 +83,8 @@ func entrar_em_batalha():
 	
 	
 	if numero_aleatorio <= 11:
-	
+		var pokemon_oponente = get_parent().pokemons.pick_random()
+		Global.pokemon_oponente = pokemon_oponente
 		get_tree().change_scene_to_file("res://Scenes/tela_batalha.tscn")
 	
 	

@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://tw8xvrrjdeod"]
 
 [ext_resource type="PackedScene" uid="uid://dso3ijyv066cc" path="res://Scenes/jogador.tscn" id="1_b2mpn"]
+[ext_resource type="Script" uid="uid://6n6o2a3erh2q" path="res://Scenes/fase_teste.gd" id="1_vbr3q"]
 [ext_resource type="Texture2D" uid="uid://bqvlxaywvavb4" path="res://Assets/Game Boy Advance - Pokemon FireRed _ LeafGreen - Tilesets - Tileset.png" id="2_qq0ii"]
 [ext_resource type="Texture2D" uid="uid://cnjp7yiua4nls" path="res://Assets/Game Boy Advance - Pokemon FireRed _ LeafGreen - Maps (Caves, Forests, Oceans, Etc.) - Canyon Entrance.png" id="2_seb3k"]
 
@@ -1357,6 +1358,7 @@ sources/0 = SubResource("TileSetAtlasSource_seb3k")
 sources/3 = SubResource("TileSetAtlasSource_vbr3q")
 
 [node name="FaseTeste" type="Node2D" unique_id=1298436794]
+script = ExtResource("1_vbr3q")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1796938544]
 z_index = -1
