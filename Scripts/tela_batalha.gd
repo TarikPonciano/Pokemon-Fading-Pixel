@@ -1,8 +1,10 @@
 extends Node2D
 
 @onready var label_especie_jogador = $"Pokemon Jogador/Especie"
+@onready var barra_vida_jogador = $"Pokemon Jogador/BarraVida"
 
 @onready var label_especie_oponente = $"Pokemon Oponente/Especie"
+@onready var barra_vida_oponente = $"Pokemon Oponente/BarraVida"
 
 var pokemon_jogador = Global.pokemon_jogador
 
@@ -16,5 +18,18 @@ func _ready() -> void:
 func carregar_pokemon_jogador():
 	label_especie_jogador.text = pokemon_jogador["Espécie"]
 	
+	barra_vida_jogador.max_value = pokemon_jogador["Vida"]
+	barra_vida_jogador.value = pokemon_jogador["Vida"]
+	
 func carregar_pokemon_oponente():
 	label_especie_oponente.text = pokemon_oponente["Espécie"]
+	
+	barra_vida_oponente.max_value = pokemon_oponente["Vida"]
+	barra_vida_oponente.value = pokemon_oponente["Vida"]
+
+
+func _on_botão_ataque_pressed() -> void:
+	pokemon_oponente["Vida"] -= pokemon_jogador["Ataque"]
+	
+	barra_vida_oponente.value = pokemon_oponente["Vida"]
+	
